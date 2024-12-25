@@ -1,0 +1,101 @@
+\hypertarget{_board_8h_source}{}\doxysection{Board.\+h}
+\label{_board_8h_source}\index{model/Board.h@{model/Board.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BOARD\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BOARD\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Pawn.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Position.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Direction.h"{}}}
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_board}{Board}}\{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} redAlivePawn\_ ;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} blueAlivePawn\_ ;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} boardSize\_;}
+\DoxyCodeLine{18     vector<vector<Pawn>> board\_;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}(vector<Pawn>\& pawnsRedTeam, vector<Pawn>\& pawnsBlueTeam);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38     \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}(\textcolor{keywordtype}{int} keyAdmin);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_aa2dc6da436fd9d591dfa460e1f3d70e6}{setPawnTest}}(\mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_pawn}{Pawn}} pawn, \textcolor{keywordtype}{int} keyAdmin);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a660c11a64a524330437693d3e4862b53}{fill}}(vector<Pawn>\&pawnsRedTeam,vector<Pawn>\& pawnsBlueTeam);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_board_a6e2c8d4dfb5b9b7cc5eae6d81cc2a5f9}{isInside}}(\mbox{\hyperlink{class_position}{Position}} pos) ;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{70     \textcolor{keyword}{inline} vector<vector<Pawn>> \&\mbox{\hyperlink{class_board_a4e92fa85128e4b5854f277de31a1744d}{getBoard}}()\{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{return} board\_;}
+\DoxyCodeLine{72     \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{79     \textcolor{keyword}{inline} \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_board_a417a824f2dd19a016763ffaf841e5b1e}{getRedAlivePawn}}() \{}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} redAlivePawn\_;}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{89     \textcolor{keyword}{inline} \textcolor{keywordtype}{int}\& \mbox{\hyperlink{class_board_a6d1bb5ab7ab1c6619182552d70a419db}{getBlueAlivePawn}}() \{}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91         \textcolor{keywordflow}{return} blueAlivePawn\_;}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 }
+\DoxyCodeLine{101     \textcolor{keyword}{inline} \mbox{\hyperlink{class_pawn}{Pawn}} \& \mbox{\hyperlink{class_board_a05672c88b9ad40c90c3b12f756bb5650}{getPawn}}(\mbox{\hyperlink{class_position}{Position}} pos) \{}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} board\_[pos.\mbox{\hyperlink{class_position_a99abd8b7df2940d78ed53aa9dd81f202}{getRow}}()][pos.\mbox{\hyperlink{class_position_a672b9b7960216f8bf4ccae287885877b}{getColumn}}()];}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_board_a2c34e1e72ddc65eb06c6fbf3e1c5aef4}{canMove}}( PawnTeam hisTeam, \mbox{\hyperlink{class_position}{Position}} pos,}
+\DoxyCodeLine{114                   Direction direction, \textcolor{keywordtype}{int} deplacement =1) ;}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{123     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a133e718ea82db8e1fb2b881a28bfdc8f}{move}}(\mbox{\hyperlink{class_position}{Position}} pos,}
+\DoxyCodeLine{124               Direction direction, \textcolor{keywordtype}{int} deplacement =1);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_board_a1380071d63bbb337abda7ed439e75933}{canFight}} (PawnTeam hisTeam, \mbox{\hyperlink{class_position}{Position}} pos,}
+\DoxyCodeLine{134                    Direction direction, \textcolor{keywordtype}{int} deplacement) ;}
+\DoxyCodeLine{141     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a37f200ec749cb123f0d5c06a36bcf510}{fight}}(\mbox{\hyperlink{class_position}{Position}} pos,Direction direction, \textcolor{keywordtype}{int} deplacement);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{150     \mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_board_affc06c1c2315c1e61ef89424a754c4b8}{newPositionAfterMove}}(\mbox{\hyperlink{class_position}{Position}} pos, Direction dir, \textcolor{keywordtype}{int} deplacement = 1);}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{158     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_board_a46c7ebc3cbe53127b228af2af0554f3e}{isBlocked}}(\mbox{\hyperlink{class_position}{Position}} pos,PawnTeam turn);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{164     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_board_aed0d56e501c3c39338f7fef0610a45f4}{getBoardSize}}()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166         \textcolor{keywordflow}{return} boardSize\_;}
+\DoxyCodeLine{167     \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{176     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_board_a074894064a14bc51a0f9cfb592e515d3}{isMovebalePawn}}(vector<vector<Pawn>> \& board, \mbox{\hyperlink{class_position}{Position}} pos, PawnTeam pawnTeam);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{183     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_board_a6f119e9c6fb86e7eafc429d72cfe3fb3}{killPawn}}(\mbox{\hyperlink{class_position}{Position}} pawnPosition, PawnTeam pawnTeam);}
+\DoxyCodeLine{184 \textcolor{keyword}{private}:}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{191     \textcolor{keywordtype}{void} toggleVisibilityTeam(PawnTeam pawTeam, \textcolor{keywordtype}{bool} isHidden);}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{198     \textcolor{keywordtype}{int} getDirectionValue(Direction direction);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{204     \textcolor{keywordtype}{void} toggleVisibilityStatus(\mbox{\hyperlink{class_pawn}{Pawn}} \& pawn);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{213     \textcolor{keywordtype}{bool} possibleOneMove(\mbox{\hyperlink{class_position}{Position}} pos, Direction direction, \textcolor{keywordtype}{int} deplacement = 1) ;}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{223     \textcolor{keywordtype}{bool} possibleMultipleMove(\mbox{\hyperlink{class_position}{Position}} pos, Direction direction, \textcolor{keywordtype}{int} deplacement);}
+\DoxyCodeLine{229     \textcolor{keywordtype}{void} changePawnSpecifities(\mbox{\hyperlink{class_position}{Position}} firstPosition, \mbox{\hyperlink{class_position}{Position}} secondPosition);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{239     \textcolor{keywordtype}{bool} checkIsPositionOccuped(\mbox{\hyperlink{class_position}{Position}} pos,Direction direction,\textcolor{keywordtype}{int} deplacement = 1);}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{246     \textcolor{keywordtype}{bool} canSpyAttack(PawnTeam team,\mbox{\hyperlink{class_position}{Position}} pos, Direction dir,\textcolor{keywordtype}{int} deplacement);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 \};}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BOARD\_H}}
+
+\end{DoxyCode}

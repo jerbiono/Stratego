@@ -1,0 +1,80 @@
+\hypertarget{_view_8h_source}{}\doxysection{View.\+h}
+\label{_view_8h_source}\index{view\_console/View.h@{view\_console/View.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIEW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIEW\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../model/Pawn.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../model/Direction.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../model/Position.h"{}}}
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_view}{View}}\{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{class_view}{View}} ();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a20fcf2c0ec688184e85627b18ef3df5d}{displayRemainsPawns}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a787ad44f56b897213cc35e4646f990d8}{displayPawnChar}}(\textcolor{keywordtype}{char} pawnChar);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_aa8ffbae76fb5e97282055fc487c1769c}{displayWelcome}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a3a88ada8bc749de711d25b4871534be7}{displayHeader}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a1f9a9ad857de67ad008307bf735108c6}{askSetUpFiles}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a18799a955986d4cea62dd93806731447}{fileFeedBack}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a57ec6d64696d5c1369df1c1985a78819}{interactiveFeedBack}}(\textcolor{keywordtype}{string} teamName);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a8e7fa94df9beb118e7a2cf099751a974}{displayfileSetUpError}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_ab2ebbc56d9fa2828f1418d798a360540}{fileErrorFeedBack}}(\textcolor{keywordtype}{string} fileName);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_aeefcd76f8ae153e5f448845ec8e00f07}{displayErrorPawn}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a0162bad40700048ef0947e1ff1ba003d}{askPawnReamaing}}(\textcolor{keywordtype}{int} row,\textcolor{keywordtype}{char} column);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_ae15709879da536c2b22048f1e47e7bb3}{printFormat}}(\textcolor{keywordtype}{int} ligne);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_ac5dc93d8bb0f721c94505a974926031c}{printPawn}}(\mbox{\hyperlink{class_pawn}{Pawn}} \& pawn, PawnTeam \& teamTurn);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_aede331def303219b06d10a1f46e48e7a}{printSymbol}}(\textcolor{keywordtype}{string} symbol);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a44272dbec65d1a5804595054ba38a081}{printEmptyLine}}();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105     Direction \mbox{\hyperlink{class_view_a0f41eae77d500415a48ec6921917fc72}{directionChoice}}();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_ab439886efb2a49188d3925e62831bab9}{nbDeplacementSpy}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_view_afc844460bed2dee7bead3405d0e111f8}{checkValidInputRow}}(\textcolor{keywordtype}{string} input);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_view_ae50e877e60864febe66153e1f60bfaa9}{checkValidInputColumn}}(\textcolor{keywordtype}{string} input);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 }
+\DoxyCodeLine{134     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_view_a33e89e1c64322c2ddbf4d0cf676cb507}{checkDirectionInput}}(\textcolor{keywordtype}{string} dir);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a16d64523bffbcd5a548504169e668c4e}{printMsg}}(\textcolor{keywordtype}{string} msg);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a9def30a4b4a0b6a64f80b99da2a7b85f}{printTurn}}(PawnTeam turn);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a2f849d686a67ee62c0a2e4f148624550}{printNbPawnAlives}}(\textcolor{keywordtype}{int} nbAlivePawn);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{158     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_a525a61cefcf3e55916b1ea5a525c3f97}{showEmptyBoard}}();}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{166     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_a18c8309d954c51ac42bb34e534b7247e}{convertedRow}}(\textcolor{keywordtype}{string} strRow);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{173     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_view_aa5c3775cae9a83f1647449f44a754c2b}{convertedColumn}}(\textcolor{keywordtype}{string} strColumn);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 \};}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// VIEW\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,92 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+\label{_game_8h_source}\index{model/Game.h@{model/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAME\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAME\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <Board.h>}}
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}}\{}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_board}{Board}} board\_;}
+\DoxyCodeLine{13     PawnTeam teamTurn\_;}
+\DoxyCodeLine{14     PawnTeam winner\_;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}(vector<char>\& teamBluePawn, vector<char>\& teamRedPawn);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     \textcolor{keyword}{inline} PawnTeam \mbox{\hyperlink{class_game_a4b29b5e0bab5d5a637f4e85dcf5161bf}{getWinner}}()\{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} winner\_;}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_a412d39d823b20d52f64158abe8b4db0a}{isOver}}(PawnTeam turn);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49     vector<vector<Pawn>>\&  \mbox{\hyperlink{class_game_ac8afa5febf14305dc99760e206a8757c}{getGameBoard}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \mbox{\hyperlink{class_board}{Board}} \& \mbox{\hyperlink{class_game_abb01bda7e2fecca8571706abec4bc3dd}{getBoard}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_aa1a55ee16b741d5963b62c10ae12a013}{canMove}}( PawnTeam hisTeam, \mbox{\hyperlink{class_position}{Position}} pos,}
+\DoxyCodeLine{65                   Direction direction, \textcolor{keywordtype}{int} deplacement =1);}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_aad6182df0739412a6bb9f824ac52524a}{move}}(\mbox{\hyperlink{class_position}{Position}} pos,}
+\DoxyCodeLine{73               Direction direction, \textcolor{keywordtype}{int} deplacement =1);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_addef6b2d541215bc6133f9f59e6efec4}{canFight}} (PawnTeam hisTeam, \mbox{\hyperlink{class_position}{Position}} \& pos,}
+\DoxyCodeLine{84                    Direction direction, \textcolor{keywordtype}{int} deplacement);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_aaf22ced3bf3a7b023e9854462fcb0cd0}{fight}}(\mbox{\hyperlink{class_position}{Position}} pos,Direction direction, \textcolor{keywordtype}{int} deplacement);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_game_a3a4cd55f33a1f614104cf30f69f2a773}{getAlivePawn}}(PawnTeam pawnTeam)\{}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if}(pawnTeam == RED)\{}
+\DoxyCodeLine{101             \textcolor{keywordflow}{return} board\_.\mbox{\hyperlink{class_board_a417a824f2dd19a016763ffaf841e5b1e}{getRedAlivePawn}}();}
+\DoxyCodeLine{102         \}}
+\DoxyCodeLine{103         \textcolor{keywordflow}{if}(pawnTeam == BLUE)\{}
+\DoxyCodeLine{104             \textcolor{keywordflow}{return} board\_.\mbox{\hyperlink{class_board_a6d1bb5ab7ab1c6619182552d70a419db}{getBlueAlivePawn}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115     \textcolor{keyword}{inline} PawnTeam \&\mbox{\hyperlink{class_game_a573668d7007a0d9936e71799ecf5ec13}{getTeamTurn}}()\{}
+\DoxyCodeLine{116         \textcolor{keywordflow}{return} teamTurn\_;}
+\DoxyCodeLine{117     \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{keyword}{private}:}
+\DoxyCodeLine{129     \mbox{\hyperlink{class_pawn}{Pawn}} correspondingPawn(\textcolor{keywordtype}{char} pawnChar, PawnTeam team);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{135     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} toggleWinner(PawnTeam turn)\{}
+\DoxyCodeLine{136         \textcolor{keywordflow}{if}(turn == BLUE)\{}
+\DoxyCodeLine{137             winner\_ = RED;}
+\DoxyCodeLine{138         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{139             \textcolor{keywordflow}{if}(turn == RED)\{}
+\DoxyCodeLine{140                 winner\_ = BLUE;}
+\DoxyCodeLine{141             \}}
+\DoxyCodeLine{142         \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{149     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} changeTurn()\{}
+\DoxyCodeLine{150         \textcolor{keywordflow}{if}(teamTurn\_ == RED)\{}
+\DoxyCodeLine{151             teamTurn\_ = BLUE;}
+\DoxyCodeLine{152         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{153             \textcolor{keywordflow}{if}(teamTurn\_ == BLUE)\{}
+\DoxyCodeLine{154                 teamTurn\_ = RED;}
+\DoxyCodeLine{155             \}}
+\DoxyCodeLine{156         \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{166     vector<Pawn> convertCharsToPawns(vector<char>\&charPawns, PawnTeam team);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \};}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GAME\_H}}
+\DoxyCodeLine{170 }
+
+\end{DoxyCode}

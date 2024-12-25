@@ -1,0 +1,202 @@
+\hypertarget{class_pawn}{}\doxysection{Pawn Class Reference}
+\label{class_pawn}\index{Pawn@{Pawn}}
+
+
+cette classe représente le pion utilisé dans le jeu.  
+
+
+
+
+{\ttfamily \#include $<$Pawn.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pawn_a0568f960416753add48d8108fbbffef2}{Pawn}} (Pawn\+Type pawn\+Type)
+\begin{DoxyCompactList}\small\item\em simple structeur des pions inutilisé ou des pions spécifiques. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pawn_a6221b3324c1ea1a7a3f542da3c69f7e0}{Pawn}} (Pawn\+Type pawn\+Type, Pawn\+Team pawn\+Team)
+\begin{DoxyCompactList}\small\item\em simpple constructeur d\textquotesingle{}un pion. \end{DoxyCompactList}\item 
+Pawn\+Team \mbox{\hyperlink{class_pawn_a4680bbb428765d364ae1b58c327f62c0}{get\+Pawn\+Team}} ()
+\begin{DoxyCompactList}\small\item\em get\+Pawn\+Team simple getteur de l\textquotesingle{}équipe lié au pion. \end{DoxyCompactList}\item 
+Pawn\+Type \mbox{\hyperlink{class_pawn_acd23684c17f7a931e87514c79e2125b1}{get\+Pawn\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Pawn\+Type simple getteur de type de pion. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{class_pawn_ab55a614e9d2f3ffb24c5c428ee045f57}{get\+Power}} ()
+\begin{DoxyCompactList}\small\item\em get\+Power simple getteur de force pion. \end{DoxyCompactList}\item 
+bool \& \mbox{\hyperlink{class_pawn_aa7ad928d11dcd5fdb1b9bee21c0e3c19}{is\+Hidden}} ()
+\begin{DoxyCompactList}\small\item\em is\+Hidden permet de vérifier si le pion est visible ou non. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pawn_ace9d4222af7f2357a0e2a8b391d4d981}\label{class_pawn_ace9d4222af7f2357a0e2a8b391d4d981}} 
+void {\bfseries toggle\+Pawn\+Visibility} ()
+\begin{DoxyCompactList}\small\item\em revealed\+Pawn permet de reveler un pion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pawn_a756ddf49c5093b5ff04ef7fbce35cc18}{set\+Pawn}} (\mbox{\hyperlink{class_pawn}{Pawn}} \&pawn)
+\begin{DoxyCompactList}\small\item\em set\+Pawn\+Type permet de changer les caractéristiques de pion. \end{DoxyCompactList}\item 
+Pawn\+Team \mbox{\hyperlink{class_pawn_ab9934faeaf9e5b5f9fcdb4773a884aba}{operator$\ast$}} (\mbox{\hyperlink{class_pawn}{Pawn}} pawn)
+\begin{DoxyCompactList}\small\item\em operator $\ast$ ca permet de comparer le pion de premier joueur avec le pion de deuxieme joueur selon leurs forces. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pawn_afd5bcb3c9f98998fe2ec0191e7a7d7ad}{operator==}} (\mbox{\hyperlink{class_pawn}{Pawn}} pawn)
+\begin{DoxyCompactList}\small\item\em operator == ca permet de comparer si les deux pion ils sont de meme type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pawn_ac7dd7338c02bbe9ab46e0f9e91bc601e}{set\+Hidden}} (bool visibilty)
+\begin{DoxyCompactList}\small\item\em set\+Is\+Hidden permet de changer la visibilty de pion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+cette classe représente le pion utilisé dans le jeu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pawn_a0568f960416753add48d8108fbbffef2}\label{class_pawn_a0568f960416753add48d8108fbbffef2}} 
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{Pawn()}{Pawn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{Pawn\+Type}]{pawn\+Type }\end{DoxyParamCaption})}
+
+
+
+simple structeur des pions inutilisé ou des pions spécifiques. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pawn\+Type} & le type de pion qui peut etre unused ou spécial. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pawn_a6221b3324c1ea1a7a3f542da3c69f7e0}\label{class_pawn_a6221b3324c1ea1a7a3f542da3c69f7e0}} 
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{Pawn()}{Pawn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{Pawn\+Type}]{pawn\+Type,  }\item[{Pawn\+Team}]{pawn\+Team }\end{DoxyParamCaption})}
+
+
+
+simpple constructeur d\textquotesingle{}un pion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pawn\+Type} & le type de pion. \\
+\hline
+{\em pawn\+Team} & son équipe. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pawn_a4680bbb428765d364ae1b58c327f62c0}\label{class_pawn_a4680bbb428765d364ae1b58c327f62c0}} 
+\index{Pawn@{Pawn}!getPawnTeam@{getPawnTeam}}
+\index{getPawnTeam@{getPawnTeam}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{getPawnTeam()}{getPawnTeam()}}
+{\footnotesize\ttfamily Pawn\+Team Pawn\+::get\+Pawn\+Team (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Pawn\+Team simple getteur de l\textquotesingle{}équipe lié au pion. 
+
+\begin{DoxyReturn}{Returns}
+son équipe. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_acd23684c17f7a931e87514c79e2125b1}\label{class_pawn_acd23684c17f7a931e87514c79e2125b1}} 
+\index{Pawn@{Pawn}!getPawnType@{getPawnType}}
+\index{getPawnType@{getPawnType}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{getPawnType()}{getPawnType()}}
+{\footnotesize\ttfamily Pawn\+Type Pawn\+::get\+Pawn\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Pawn\+Type simple getteur de type de pion. 
+
+\begin{DoxyReturn}{Returns}
+le type de pion correspondant. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_ab55a614e9d2f3ffb24c5c428ee045f57}\label{class_pawn_ab55a614e9d2f3ffb24c5c428ee045f57}} 
+\index{Pawn@{Pawn}!getPower@{getPower}}
+\index{getPower@{getPower}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{getPower()}{getPower()}}
+{\footnotesize\ttfamily int \& Pawn\+::get\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Power simple getteur de force pion. 
+
+\begin{DoxyReturn}{Returns}
+sa force. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_aa7ad928d11dcd5fdb1b9bee21c0e3c19}\label{class_pawn_aa7ad928d11dcd5fdb1b9bee21c0e3c19}} 
+\index{Pawn@{Pawn}!isHidden@{isHidden}}
+\index{isHidden@{isHidden}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{isHidden()}{isHidden()}}
+{\footnotesize\ttfamily bool \& Pawn\+::is\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Hidden permet de vérifier si le pion est visible ou non. 
+
+\begin{DoxyReturn}{Returns}
+true si il est caché sinon return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_ab9934faeaf9e5b5f9fcdb4773a884aba}\label{class_pawn_ab9934faeaf9e5b5f9fcdb4773a884aba}} 
+\index{Pawn@{Pawn}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily Pawn\+Team Pawn\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pawn}{Pawn}}}]{pawn }\end{DoxyParamCaption})}
+
+
+
+operator $\ast$ ca permet de comparer le pion de premier joueur avec le pion de deuxieme joueur selon leurs forces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pawn} & le pion de deuxième joueur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}équipe qui a le pion le plus fort, en cas d\textquotesingle{}égalité return neutral 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_afd5bcb3c9f98998fe2ec0191e7a7d7ad}\label{class_pawn_afd5bcb3c9f98998fe2ec0191e7a7d7ad}} 
+\index{Pawn@{Pawn}!operator==@{operator==}}
+\index{operator==@{operator==}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Pawn\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pawn}{Pawn}}}]{pawn }\end{DoxyParamCaption})}
+
+
+
+operator == ca permet de comparer si les deux pion ils sont de meme type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pawn} & le pion adverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si ils ont le meme type sinon return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pawn_ac7dd7338c02bbe9ab46e0f9e91bc601e}\label{class_pawn_ac7dd7338c02bbe9ab46e0f9e91bc601e}} 
+\index{Pawn@{Pawn}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily void Pawn\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{visibilty }\end{DoxyParamCaption})}
+
+
+
+set\+Is\+Hidden permet de changer la visibilty de pion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visibilty} & true si le pion est cache sinon true pour le reveler. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pawn_a756ddf49c5093b5ff04ef7fbce35cc18}\label{class_pawn_a756ddf49c5093b5ff04ef7fbce35cc18}} 
+\index{Pawn@{Pawn}!setPawn@{setPawn}}
+\index{setPawn@{setPawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{setPawn()}{setPawn()}}
+{\footnotesize\ttfamily void Pawn\+::set\+Pawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pawn}{Pawn}} \&}]{pawn }\end{DoxyParamCaption})}
+
+
+
+set\+Pawn\+Type permet de changer les caractéristiques de pion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pawn} & le pion donnee. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+model/Pawn.\+h\item 
+model/Pawn.\+cpp\end{DoxyCompactItemize}
